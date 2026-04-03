@@ -1,0 +1,58 @@
+.nexus {
+    /* Basic styling for Nexus Community */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Light Theme */
+.light-theme {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.light-theme a {
+    color: #007bff;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme a {
+    color: #bb86fc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nexus-header, .nexus-footer {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* UI Components */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.button-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
