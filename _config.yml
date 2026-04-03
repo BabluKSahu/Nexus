@@ -1,0 +1,27 @@
+# Jekyll settings for GitHub Pages
+
+# Title of your website
+title: My Awesome Project
+
+# Description of your website
+description: This is a blog about awesome things.
+
+# Base URL
+baseurl: "/Nexus"
+
+# Specify the theme
+theme: jekyll-theme-minimal
+
+# Plugins to load
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .gitignore
+  - .git
