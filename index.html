@@ -1,29 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nexus Community Application</title>
-    <!-- Load minified CSS -->
-    <link rel="stylesheet" href="/styles.min.css">
-    <!-- Load favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; style-src 'self' 'unsafe-inline';">
-    <meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="googlebot" content="index,follow">
+<title>Nexus Community — Where Conversations Happen</title>
+<meta name="description" content="Nexus is a free open-source community platform. Join communities, post discussions, comment, vote, and discover trending content. No ads, no tracking, no cost.">
+<meta name="keywords" content="community platform,discussion forum,reddit alternative,online community,free forum,social media alternative,message board">
+<link rel="canonical" href="https://babluksahu.github.io/Nexus/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nexus Community — Where Conversations Happen">
+<meta property="og:description" content="A free open-source community platform for sharing, discussing, and discovering content together.">
+<meta property="og:url" content="https://babluksahu.github.io/Nexus/">
+<meta property="og:site_name" content="Nexus Community">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nexus Community">
+<meta name="twitter:description" content="Where conversations happen. Free, open, community-driven.">
+<meta name="theme-color" content="#FF6B35">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          heading: ['Space Grotesk', 'sans-serif'],
+          body: ['DM Sans', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Nexus Community",
+  "url":"https://babluksahu.github.io/Nexus/",
+  "description":"A free open-source community platform for sharing, discussing, and discovering content.",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://babluksahu.github.io/NexusNexus/#/search?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
 </head>
 <body>
-    <header>
-        <h1>Nexus Community Application</h1>
-    </header>
-    <main>
-        <p>Welcome to the modular Nexus Community application!</p>
-    </main>
-    <footer>
-        <p>&copy; 2026 Nexus Community. All rights reserved.</p>
-    </footer>
-    <!-- Load minified JavaScript -->
-    <script src="/app.min.js"></script>
+
+<!-- ====== NAVBAR ====== -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div style="display:flex;align-items:center;gap:16px;width:100%">
+    <a href="#/" style="display:flex;align-items:center;gap:8px;flex-shrink:0" aria-label="Nexus Home">
+      <div style="width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center">
+        <i class="fas fa-bolt" style="color:#fff;font-size:16px"></i>
+      </div>
+      <span class="font-heading font-bold text-lg hidden sm:block" style="color:var(--text)">Nexus</span>
+    </a>
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="search" id="nav-search" placeholder="Search communities and posts..." aria-label="Search">
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0" id="nav-actions"></div>
+  </div>
+</nav>
+
+<!-- ====== MAIN APP ====== -->
+<div id="app">
+  <aside id="sidebar-left" role="complementary" aria-label="Navigation sidebar"></aside>
+  <main id="main-content" role="main"></main>
+  <aside id="sidebar-right" role="complementary" aria-label="Info sidebar"></aside>
+</div>
+
+<!-- ====== MODAL ====== -->
+<div id="modal-overlay" role="dialog" aria-modal="true"><div class="modal" id="modal-content"></div></div>
+
+<!-- ====== TOAST ====== -->
+<div id="toast-container" aria-live="polite"></div>
+
+<!-- ====== MOBILE NAV ====== -->
+<nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="nav-items">
+    <button class="nav-item active" data-nav="home"><i class="fas fa-home"></i>Home</button>
+    <button class="nav-item" data-nav="communities"><i class="fas fa-users"></i>Groups</button>
+    <button class="nav-item" data-nav="create"><i class="fas fa-plus-circle"></i>Create</button>
+    <button class="nav-item" data-nav="search"><i class="fas fa-search"></i>Search</button>
+    <button class="nav-item" data-nav="profile"><i class="fas fa-user"></i>Profile</button>
+  </div>
+</nav>
+
+<script src="script.js"></script>
 </body>
 </html>
